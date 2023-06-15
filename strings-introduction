@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String B=sc.next();
+        int n = A.length(); // java method to fetch the length of string
+        int m = B.length();
+        int l = n + m;
+        System.out.println(l);
+        if (A.compareTo(B)>0){ //lexographical comparison: if string1 comes after string2 in a dictionary then string1 is 
+                                lexographically greater than string2. compareTo() method is used to lexographically compare strings.
+            System.out.println("Yes");
+        }
+        else {
+            System.out.println("No");
+        }
+        String A1 = A.substring(0,1).toUpperCase() + A.substring(1);
+        String B1 = B.substring(0,1).toUpperCase() + B.substring(1);
+        System.out.println ( A1 + " " + B1);
+        
+        /* substring() is used to fetch substring of a string. The substring (0,1) considers string between the first and the second specified index where the first index 
+        is inclusive and the second is exclusive. A.substring (1) considers all the characters from index 1 till the end of the string. toUpperCase() method converts whatever 
+        is specified to upper case. */        
+    }
+}
+
+
