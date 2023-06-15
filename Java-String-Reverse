@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Solution {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String Arev = ""; //should be empty string since we're not reading it, we are finding the reversed string. Do not add space.
+        char ch;
+        int l = A.length();
+        
+        //reverse the string
+        for (int i=0; i<l; i++){
+            ch= A.charAt(i);
+            Arev =ch+Arev;
+        }  //System.out.println(Arev);
+        
+        //checks palindrome 
+        if (A.equals(Arev)){
+            System.out.println ("Yes");
+        }   
+        else {
+            System.out.println("No");
+        }
+        sc.close();
+    }
+}
