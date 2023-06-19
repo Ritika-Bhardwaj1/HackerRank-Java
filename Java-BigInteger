@@ -1,0 +1,13 @@
+import java.util.Scanner;
+import java.math.BigInteger;
+public class Solution{
+    public static void main(String args[]){
+        Scanner scan = new Scanner (System.in);
+        BigInteger a = scan.nextBigInteger();
+        BigInteger b = scan.nextBigInteger();
+        BigInteger sum = a.add(b); //BigIntegers don't support normal +. Use add() method to add 2 BigInteger values. 
+        BigInteger product = a.multiply(b); //BigIntegers don't support normal *. Use multiply() method to multiply 2 BigInteger values. 
+        System.out.println(sum);
+        System.out.println(product);
+    }
+}
