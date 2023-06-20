@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int testCases = Integer.parseInt(scan.nextLine()); //initialize no. of test cases
+        while (testCases > 0) {
+            String pattern = scan.nextLine(); //read the string input from user
+            try {
+                Pattern.compile(pattern); //By calling Pattern.compile(pattern), you compile the user-provided regular expression 
+                                          pattern into a Pattern object that can be used for matching or searching against strings.
+                System.out.println("Valid"); //if upon compiling the user entered patterns matches with the compiled pattern then it is valid
+            } catch (PatternSyntaxException e) {
+                System.out.println("Invalid");
+            }
+            testCases--; //testcases decrease as each test case is evaluated
+        }
+        scan.close();
+    }
+}
