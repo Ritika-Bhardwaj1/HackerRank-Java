@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class UsernameValidator {
+    public static final String regularExpression = "(^[A-Za-z]\\w{7,29}$)";
+    //^: The caret symbol represents the start of a line.
+    //[A-Za-z]: This part defines a character class that matches any uppercase or lowercase letter from A to Z. 
+                It ensures that the first character of the string is a letter.
+    // \\w: The double backslash represents an escape sequence to match a word character. \w matches any alphanumeric character (letters, digits, or underscores).
+            {7,29}: This quantifier specifies the range of occurrences. It means that the previous token (in this case, \w) should occur between 7 and 29 times inclusively.
+    // $: The dollar sign represents the end of a line.
+}
+
+
+public class Solution {
+    private static final Scanner scan = new Scanner(System.in);
+    
+    public static void main(String[] args) {
+        int n = Integer.parseInt(scan.nextLine());
+        while (n-- != 0) {
+            String userName = scan.nextLine();
+
+            if (userName.matches(UsernameValidator.regularExpression)) {
+                System.out.println("Valid");
+            } else {
+                System.out.println("Invalid");
+            }           
+        }
+    }
+}
